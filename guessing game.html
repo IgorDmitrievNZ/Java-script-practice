@@ -1,0 +1,33 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+var from1To =10;
+var ansver = parseInt(Math.random() * from1To);
+// document.write(ansver);
+var userAnsver = +prompt("guess a number from 0 to " + from1To);
+var maxTryCount = 3;
+
+
+
+for( var tryCount = 1; tryCount <= maxTryCount; tryCount++){
+
+	if(userAnsver == ansver){
+		alert("congrats you won!");
+		break;
+		//   continue; -
+	} else if(userAnsver > ansver){
+		alert("too big number ");
+	} else if(userAnsver < ansver){
+		alert("too small number ");
+	}
+	if(tryCount == maxTryCount){
+        alert("you lost!");
+        break;
+    }
+	userAnsver = +prompt("try guess a number from 0 to " +from1To+ " one more time\n you have " + (maxTryCount - tryCount) + " try");
+}
+
+
+	alert("right answer is " + ansver);
+
+
+</script>
