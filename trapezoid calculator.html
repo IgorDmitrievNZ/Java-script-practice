@@ -1,16 +1,12 @@
 <meta charset="utf-8">
 <script type="text/javascript">
-	
-	var a = prompt("Enter first value");
-	var b = prompt("Enter second value");
-	var h = prompt("Enter hight value");
-	a = parseInt(a);
-	b = parseInt(b);
-	h = parseInt(h);
+
+	var a = +prompt("Enter first value");
+	var b = +prompt("Enter second value");
+	var h = +prompt("Enter hight value");
+	// a = parseInt(a);
+	// b = parseInt(b); ------use +prompt instead of parsInt------
+	// h = parseInt(h);
 	alert("Square trapezoid is: " + ((a + b) / 2) * h);
-
-
-
-
 
 </script>
