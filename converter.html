@@ -2,23 +2,12 @@
 <script type="text/javascript">
 	
 	var rub = prompt("Enter quantity rubles you have");
-	rubQuantyty = parseInt(rub);
-	var euro = 80;
-	var summary = (rub / euro);
-	alert ("Unfortunotely you have only: " + summary + "€"); 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	// rub = parseInt(rub);
+	var euro = 83.22;
+	var nz_dollar = 51.19;
+	var calc_euro = (rub / euro);
+	var calc_dollar = (rub / nz_dollar);
+	alert (rub + " rub = " + calc_euro.toFixed(2) + "€" + 
+		   "\n"+rub + " rub = " + calc_dollar.toFixed(2) + "$");
 
 </script>
