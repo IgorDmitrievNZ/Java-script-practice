@@ -1,33 +1,42 @@
 <meta charset="utf-8">
 <script type="text/javascript">
+
+// 3. Дописать игру “Угадай число”
+// Сделать игру с двумя игроками и бесконечным числом попыток. Сделайте возможность выйти из игры по желанию одного из игроков.
+
+// 3. Finish the game "Guess the number"
+// Make a game with two players and an infinite number of tries. Make it possible to exit the game at the request of one of the players.
+
 var from1To =10;
-var ansver = parseInt(Math.random() * from1To);
-// document.write(ansver);
-var userAnsver = +prompt("guess a number from 0 to " + from1To);
-var maxTryCount = 3;
+var answer = parseInt(Math.random() * from1To);
+var player = 1;
 
+while (true){
+	var userAnswer = prompt("Player " + player + " guess a number from 0 to " + (from1To - 1) + "\nOr press 'q' for exit");
 
-
-for( var tryCount = 1; tryCount <= maxTryCount; tryCount++){
-
-	if(userAnsver == ansver){
-		alert("congrats you won!");
+	if(userAnswer == 'q'){
+		alert("Player " + player + " left the game");
 		break;
-		//   continue; -
-	} else if(userAnsver > ansver){
-		alert("too big number ");
-	} else if(userAnsver < ansver){
-		alert("too small number ");
 	}
-	if(tryCount == maxTryCount){
-        alert("you lost!");
-        break;
-    }
-	userAnsver = +prompt("try guess a number from 0 to " +from1To+ " one more time\n you have " + (maxTryCount - tryCount) + " try");
+
+	userAnswer = parseInt(userAnswer);
+
+	if(userAnswer == answer){
+		alert("Player " + player + " won!");
+		break;
+		} else if(userAnswer > answer){
+			alert("too big number ");
+			} else if(userAnswer < answer){
+				alert("too small number ");
+				}
+	if (player == 1){
+		player = 2;
+	}else{
+		player = 1;
+	}
 }
-
-
-	alert("right answer is " + ansver);
+alert("Right answer is " + answer);
+alert("GAME OVER");
 
 
 </script>
