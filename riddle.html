@@ -1,0 +1,62 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+// 1. Игра в загадки
+// a. Загадать загадку. Если ответ верен – поздравить пользователя. Затем сообщить, что игра окончена.
+// b. Если ответ неверный – написать пользователю, что он не угадал.
+// c. Добавить еще 3 загадки. Подсчитать количество правильных ответов, сообщить пользователю.
+// d. (По желанию). В качестве верного ответа принимать несколько вариантов ответов. Например, «Стул», «стул», «табуретка» и так далее.
+
+
+// 1. A game of riddles
+// a. Make a riddle. If the answer is correct, congratulate the user. Then indicate that the game is over.
+// b. If the answer is incorrect, write to the user that he did not guess correctly.
+// c. Add 3 more puzzles. Count the number of correct answers, inform the user.
+// d. (Optional). Accept multiple answer choices as a correct answer. For example, "Chair", "chair", "CHAIR" and so on.
+
+var riddle1 = "Riddle#1: The more you take, the more you leave behind. What am I?";
+var riddle2 = "Riddle#2: If two’s company, and three’s a crowd, what are four and five?"
+var riddle3 = "Riddle#3: Four legs up, four legs down, soft in the middle, Hard all around."
+var riddle4 = "Riddle#4: I am so simple, that I can only point yet I guide men all over the world."
+
+var answer1 = "footsteps";
+var answer2 = "nine";
+var answer3 = "bed";
+var answer4 = "compass";
+var rightAnswer = 0;
+
+	alert(riddle1);
+
+for (var trys = 0; trys < 4; trys++) {
+	var userAnswer = prompt("Enter your answer here");
+	userAnswer = userAnswer.toLowerCase();
+	if (userAnswer==answer1 || userAnswer == answer2 || userAnswer == answer3 || userAnswer == answer4){
+		alert("You are god damn right");
+		rightAnswer++;
+	}else{
+		alert("You are wrong");
+	}
+if(trys == 3){
+	break;
+}
+
+if(userAnswer == answer1){
+	alert(riddle2);
+}
+
+if(userAnswer == answer2){
+	alert(riddle3);
+}
+
+if(userAnswer == answer3){
+	alert(riddle4);
+}
+
+}
+ alert("You have " + rightAnswer + " right answers.\nGAME OVER" );
+
+
+
+
+
+</script>
