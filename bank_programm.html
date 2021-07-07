@@ -1,0 +1,31 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+// 2. Банковская программа
+// Пользователь вводит сумму вклада и процент, который будет начисляться ежегодно. Отобразить размер вклада поочередно на ближайшие 5 лет.
+
+// 2. Banking program
+// The user enters the amount of the deposit and the percentage that will be charged annually. Display the size of the deposit one by one for the next 5 years.
+
+// var a = +prompt("Enter the amount of the deposit here");
+// var b = +prompt("Enter the percentage that will be charged annually");
+var year;
+do{
+	var a = +prompt("Enter the amount of the deposit here"); 
+}while(isNaN(a) || a < 0);
+
+
+do{
+	var b = +prompt("Enter the percentage that will be charged annually");
+}while(isNaN(b) || b < 0);
+
+
+for (var year = 1; year < 6; year++){
+	var c = (a /100) * b;
+	a = a + c;
+document.write(year + " Year. The size of your the deposit is " + a  + "<br>");
+// document.write(b + "%<br>"); // % from user 
+// document.write(c + "%<br>"); // % from new sum every year
+}
+
+</script>
