@@ -1,0 +1,79 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+// a. Написать функцию, которая принимает в качестве параметра число n. Результатом работы функции является массив из N элементов со значениями 1, 2, 3… n.
+// b. Написать функцию, которая принимает массив чисел. Результатом работы функции является сумма чисел этого массива.
+// c. Написать функцию, которая на вход получает массив целых чисел, и в качестве результата возвращает максимальное число.
+// d. Написать функцию, которая на вход получает массив целых чисел, и в качестве результата возвращает минимальное число.
+// f. Написать функцию, которая на вход получает массив целых чисел, и в качестве результата возвращает только четные числа из этого массива. Чтобы определить четность числа, воспользуйтесь оператором для подсчета остатка от деления: x % 2. Если остаток от деления числа на 2 равен 0, число будет четное.
+
+// 	a. Write a function that takes n as a parameter. The result of the function is an array of N elements with values 1, 2, 3… n.
+// b. Write a function that takes an array of numbers. The result of the function is the sum of the numbers in this array.
+// c. Write a function that receives an array of integers as input, and returns the maximum number as a result.
+// d. Write a function that receives an array of integers as input, and returns the minimum number as a result.
+// f. Write a function that receives an array of integers as input, and returns only even numbers from this array as a result. To determine whether a number is even, use the remainder operator: x % 2. If the remainder of a number divided by 2 is 0, the number will be even.
+
+
+//************** Functions *******************
+
+function generateArray(n) {
+	var numbers = [];
+	for (var i = 0; i < n; i++) {
+		var arrayNumber = i + 1;
+	numbers.push(arrayNumber);
+	}
+	return numbers;
+}
+
+function getSumArray(array) {
+	var count = 0;
+for (var i = 0; i < array.length; i++) {
+	count = array[i] + count;
+}
+return count;
+}
+
+function maxNumber (array) {
+	var count = array[0];
+	for (var i = 0; i < array.length; i++) {
+		if (count <= array[i]) {
+			count = array[i];
+		} 
+	}
+	return count;
+}
+
+function minNumber (array) {
+	var count = array[0];
+	for (var i = 0; i < array.length; i++) {
+		if (count >= array[i]) {
+			count = array[i];
+		} 
+	}
+	return count;
+}
+
+function evenNumbers (array) {
+	var evenArr = [];
+	for (var i = 0; i < array.length; i++) {
+			if (array[i]%2 == 0) {
+			var numbers = array[i];
+			evenArr.push(numbers);
+		} 
+	}
+	return evenArr;
+}
+
+//********************  Main  ************************
+
+alert (generateArray(5));
+
+alert(getSumArray(generateArray(7)));
+
+alert(maxNumber([42,100,72,87,22]));
+
+alert(minNumber([42,100,3,87,22]));
+
+alert(evenNumbers([3,34,55,12,6]));
+
+</script>
