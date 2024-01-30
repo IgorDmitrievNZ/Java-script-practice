@@ -1,5 +1,12 @@
 body {
     background-color: antiquewhite;
+    background-image: url('https://www.telegraph.co.uk/content/dam/Travel/2019/September/nz.jpg');
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    
 }
 
 .main_text {
