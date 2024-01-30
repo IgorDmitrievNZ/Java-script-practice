@@ -27,3 +27,18 @@
     padding: 30px;
     display: block;
 }
+.same {
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    background: yellow;
+}
+
+#first {
+    float: right;
+}
+
+#second {
+    float: right;
+    background: blue;
+}
