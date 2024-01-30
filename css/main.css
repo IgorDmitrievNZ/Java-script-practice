@@ -48,3 +48,12 @@ input:focus {
 p.text:not(:empty) {
     color: darkslateblue;
 }
+
+#some_id::after {
+    content: "Hello";
+    color: rgb(129, 18, 209);
+}
+
+p.main_link::first-letter {
+    color: black;
+}
