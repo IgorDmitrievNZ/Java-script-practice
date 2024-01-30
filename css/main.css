@@ -1,3 +1,16 @@
 body {
     background-color: antiquewhite;
 }
+
+.main_text {
+    color: darkslategrey;
+}
+
+#text_2 {
+    color: brown;
+}
+
+/* вложенные стили */
+div p b, div i {
+    color: green;
+}
