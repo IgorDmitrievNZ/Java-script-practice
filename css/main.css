@@ -11,6 +11,40 @@ body {
 }
 
 /* вложенные стили */
-div p b, div i {
+div p b,
+div i {
     color: green;
+}
+
+.main_link {
+    color: crimson;
+    text-decoration: none;
+}
+
+.main_link:hover {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+    /* cursor:url('https://en.wikipedia.org/wiki/Flag_of_New_Zealand#/media/File:Flag_of_New_Zealand.svg'); */
+}
+
+.main_link:active {
+    text-decoration: line-through;
+}
+
+.main_link:visited {
+    text-decoration: line-through;
+    color: grey;
+}
+
+input {
+    color: blue;
+}
+
+input:focus {
+    color: red;
+}
+
+p.text:not(:empty) {
+    color: darkslateblue;
 }
