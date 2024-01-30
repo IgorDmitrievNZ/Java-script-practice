@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .main_text {
     color: black;
     text-align: center;
@@ -9,4 +14,16 @@
     word-spacing: 10px;
     letter-spacing: -1px;
     line-height: 50px;
+}
+
+.block {
+    background: red;
+    height: 20vh;
+    width: 20%;
+    border: 5px solid black;
+    border-radius: 10px 50%;
+    opacity: 0.9;
+    margin: 20px;
+    padding: 30px;
+    display: block;
 }
