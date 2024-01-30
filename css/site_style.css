@@ -28,6 +28,35 @@
     float: left;
 }
 
+#nav {
+    list-style: none;
+    display: block;
+    float: left;
+    width: 50%;
+    margin-left: 25%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#nav li {
+    display: inline;
+    background: rgb(245, 242, 237);
+    border: 1px solid silver;
+    padding: 0 20px;
+}
+
+#nav li:hover {
+    color: white;
+    background: blue;
+    border-radius: 5px;
+    cursor: pointer;
+    border-color: blue;
+}
+
+#nav li:not(:last-of-type) {
+    margin-right: 20px;
+}
+
 #main {
     width: 50%;
     margin-left: 10%;
@@ -35,6 +64,8 @@
     border: 1px solid silver;
     padding: 20px;
     float: left;
+    position: relative;
+    z-index: 1;
 }
 
 #aside {
@@ -46,7 +77,8 @@
     float: right;
     position: relative;
     top: -10px;
-    left: -10px;
+    left: -100px;
+    z-index: 0;
 }
 
 #footer {
